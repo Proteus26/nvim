@@ -13,9 +13,7 @@
 
 run the following commands to remove your old/prexisting configs (make sure to back them up somewhere if needed):
 
-rm -rf ~/.config/nvim
-rm -rf ~/.local/share/nvim
-rm -rf ~/.local/state/nvim
+rm -rf ~/.config/nvim && rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim
 
 then, run:
 
