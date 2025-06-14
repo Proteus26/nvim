@@ -7,3 +7,18 @@
 # Credits
 
 1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+2) NVChad, as it is built off of it
+
+# Installation
+
+run the following commands to remove your old/prexisting configs (make sure to back them up somewhere if needed):
+
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+
+then, run:
+
+git clone https://github.com/Proteus26/nvim.git ~/.config/nvim && nvim
+
+You can install more LSPs and Linters by running :Mason and then configure it if needed.
