@@ -9,7 +9,7 @@ local servers = {
     "dockerls",
     "gopls",
     "html",
-    "tsserver",
+    "ts_ls",
     "dartls",
     "lua_ls",
     "tailwindcss",
@@ -119,7 +119,7 @@ lspconfig.gopls.setup {
     },
 }
 
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
     on_attach = on_attach,
     on_init = on_init,
     capabilities = capabilities,
@@ -169,7 +169,7 @@ lspconfig.rust_analyzer.setup {
             procMacro = {
                 enable = true,
             },
-            checkOnSave = {
+            check = {
                 command = "clippy",
             },
         },
