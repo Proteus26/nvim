@@ -1,9 +1,6 @@
 return {
     "goolord/alpha-nvim",
     event = "VimEnter",
-    dependencies = {
-        -- "nvim-tree/nvim-web-devicons",
-    },
     config = function()
         local alpha = require("alpha")
         local dashboard = require("alpha.themes.dashboard")
@@ -40,16 +37,16 @@ return {
             dashboard.button("q", "   Quit NVIM", ":qa<CR>"),
         }
 
-        -- set highlight groups
-        vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#ffffff" })
+        -- Manually set Catppuccin Mocha colors
+        vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#89b4fa" }) -- Blue
         dashboard.section.header.opts.hl = "DashboardHeader"
 
-        vim.api.nvim_set_hl(0, "DashboardFooterNormal", { fg = "#ffffff" })
-        vim.api.nvim_set_hl(0, "DashboardFooterOrange", { fg = "#ffa500" })
-        vim.api.nvim_set_hl(0, "DashboardFooterRed", { fg = "#D9534F" })
+        vim.api.nvim_set_hl(0, "DashboardFooterNormal", { fg = "#cdd6f4" })           -- Text
+        vim.api.nvim_set_hl(0, "DashboardFooterOrange", { fg = "#fab387" })           -- Peach
+        vim.api.nvim_set_hl(0, "DashboardFooterRed", { fg = "#f38ba8" })              -- Red
 
-        vim.api.nvim_set_hl(0, "DashboardButtonKey", { fg = "#ffffff", bold = true })
-        vim.api.nvim_set_hl(0, "DashboardButtonText", { fg = "#ffffff" })
+        vim.api.nvim_set_hl(0, "DashboardButtonKey", { fg = "#cba6f7", bold = true }) -- Mauve
+        vim.api.nvim_set_hl(0, "DashboardButtonText", { fg = "#cdd6f4" })             -- Text
 
         for _, button in ipairs(dashboard.section.buttons.val) do
             button.opts.hl_shortcut = "DashboardButtonKey"
@@ -74,13 +71,13 @@ return {
                 end
 
                 dashboard.section.footer.opts.hl = footer_hl
-
                 dashboard.section.footer.val = {
                     " ",
                     " ",
                     " ",
                     "󱐌 " .. plugins.count .. " plugins loaded in " .. time .. " ms",
                 }
+
                 pcall(vim.cmd.AlphaRedraw)
             end,
         })
