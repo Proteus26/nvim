@@ -1,23 +1,28 @@
-## How to install
+## How to install (Linux/MacOS/WSL)
 
-### Installer (Linux/MacOS/WSL)
-You can preview it [here](https://github.com/NormalNvim/installer)
+### Remove previous config
 ```sh
-wget -q https://raw.githubusercontent.com/NormalNvim/installer/main/installer.sh && chmod +x installer.sh && ./installer.sh
+rm -rf ~/.config/nvim && rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim 
 ```
 
-### Clone manually (Linux/MacOS/WSL)
+### Installer
 ```sh
-# Strongly recommended: Fork the repo and clone YOUR fork.
-git clone https://github.com/NormalNvim/NormalNvim.git ~/.config/nvim
+wget -q https://raw.githubusercontent.com/Proteus26/nvim/main/install.sh && chmod +x installer.sh && ./installer.sh
 ```
 
-### Clone manually (Windows)
+### Clone manually
 ```sh
-# Strongly recommended: Fork the repo and clone YOUR fork.
-git clone https://github.com/NormalNvim/NormalNvim.git %USERPROFILE%\AppData\Local\nvim && nvim
+git clone https://github.com/Proteus26/nvim.git ~/.config/nvim
 ```
 
-
-### Blocked
-* Once selene add [this](https://github.com/Kampfkarren/selene/issues/224) and [this](https://github.com/Kampfkarren/selene/issues/524) and [this](https://github.com/Kampfkarren/selene/pull/591), let's add the new rules.
+### Dependencies (if manual install)
+* yazi
+* yarn
+* rust
+* fd
+* delta
+* grcov
+* jest
+* pytest
+* cargo-nextest
+* dotnet-runtime
