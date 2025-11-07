@@ -7,7 +7,7 @@ rm -rf ~/.config/nvim && rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvi
 
 ### Installer
 ```sh
-wget -q https://raw.githubusercontent.com/Proteus26/nvim/main/install.sh && chmod +x installer.sh && ./installer.sh
+wget -q https://raw.githubusercontent.com/Proteus26/nvim/main/install.sh && chmod +x install.sh && ./install.sh
 ```
 
 ### Clone manually
