@@ -36,3 +36,26 @@ for _, lsp in ipairs(servers) do
     end
 end
 --]]
+
+vim.diagnostic.config({
+  signs = false,
+
+  virtual_text = {
+    spacing = 4,
+    source = "if_many",
+    prefix = function(diagnostic)
+      -- Use a cross for errors
+      if diagnostic.severity == vim.diagnostic.severity.ERROR then
+        return '󰅘' 
+      -- Use an exclamation mark for warnings
+      elseif diagnostic.severity == vim.diagnostic.severity.WARN then
+        return '󰳤' 
+      -- Fallback for info and hints (you can change this)
+      else
+        return '󱗝' 
+      end
+    end,
+  },
+  
+  underline = true,
+})
