@@ -4,7 +4,7 @@ vim.pack.add({
     {
         src = "https://github.com/saghen/blink.cmp",
         branch = "v2",
-        build = function()
+		build = function()
             require('blink.cmp').build():wait(60000)
         end,
     },
@@ -41,7 +41,7 @@ blink.setup({
         preset = 'super-tab',
         ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
     },
-    fuzzy = { 
+    fuzzy = {
 		implementation = "lua",
 	},
 })

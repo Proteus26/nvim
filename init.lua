@@ -12,6 +12,7 @@ require 'ui.notify'
 require 'ui.noice'
 require 'ui.lspicons'
 require 'ui.heirline'
+require 'ui.gitsigns'
 
 require 'fs.neotree'
 require 'fs.telescope'
