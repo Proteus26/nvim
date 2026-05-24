@@ -17,3 +17,5 @@ require 'ui.gitsigns'
 require 'fs.neotree'
 require 'fs.telescope'
 require 'fs.yazi'
+
+require 'misc.pairs'

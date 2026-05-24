@@ -2,8 +2,7 @@ vim.pack.add({
     { src = "https://github.com/mikavilpas/yazi.nvim" }
 })
 
-local status_ok, yazi = pcall(require, "yazi")
-if not status_ok then return end
+local yazi = require("yazi")
 
 yazi.setup({
     open_for_directories = true,

@@ -1,6 +1,12 @@
 vim.pack.add({
+    { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/MunifTanjim/nui.nvim" },
-    { src = "https://github.com/nvim-neo-tree/neo-tree.nvim", branch = "v3.x" }
+    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+
+    {
+        src = "https://github.com/nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+    }
 })
 
 vim.g.neo_tree_remove_legacy_commands = true
@@ -139,7 +145,7 @@ neotree.setup({
         follow_current_file = {
             enabled = true,
         },
-        hijack_netrw_behavior = "open_current",
+        hijack_netrw_behavior = "disabled",
         use_libuv_file_watcher = true,
     },
     event_handlers = {
