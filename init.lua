@@ -19,3 +19,5 @@ require 'fs.telescope'
 require 'fs.yazi'
 
 require 'misc.pairs'
+require 'misc.floaterm'
+require 'misc.markview'
