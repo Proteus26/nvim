@@ -1,8 +1,8 @@
 vim.o.number = true
 vim.o.relativenumber = true
 vim.opt.signcolumn = "yes"
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -10,6 +10,7 @@ vim.g.maplocalleader = " "
 vim.opt.termguicolors = true
 vim.opt.cmdheight = 0
 vim.opt.showtabline = 2
+vim.opt.splitbelow = true
 
 vim.o.clipboard = 'unnamedplus'
 

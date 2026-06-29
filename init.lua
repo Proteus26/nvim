@@ -13,6 +13,7 @@ require 'ui.noice'
 require 'ui.lspicons'
 require 'ui.heirline'
 require 'ui.gitsigns'
+require 'ui.colorizer'
 
 require 'fs.neotree'
 require 'fs.telescope'
