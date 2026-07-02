@@ -1,9 +1,15 @@
 require 'settings'
 require 'keymaps'
 
-require	'lsp.autocomplete'
+require 'lsp.autocomplete'
 require 'lsp.mason'
-require 'lsp.treesitter'
+require 'lsp.servers'
+
+require 'dap.dap'
+
+require 'editor.treesitter'
+require 'editor.editing'
+require 'editor.format'
 
 require 'ui.colorscheme'
 require 'ui.alpha'
@@ -14,11 +20,12 @@ require 'ui.lspicons'
 require 'ui.heirline'
 require 'ui.gitsigns'
 require 'ui.colorizer'
+require 'ui.whichkey'
 
 require 'fs.neotree'
 require 'fs.telescope'
 require 'fs.yazi'
 
-require 'misc.pairs'
+require 'misc.compiler'
 require 'misc.floaterm'
 require 'misc.markview'

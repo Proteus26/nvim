@@ -1,5 +1,6 @@
 vim.o.number = true
 vim.o.relativenumber = true
+vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -8,7 +9,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 vim.opt.termguicolors = true
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
+vim.opt.showmode = false
 vim.opt.showtabline = 2
 vim.opt.splitbelow = true
 
