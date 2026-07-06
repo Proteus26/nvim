@@ -76,6 +76,10 @@
       "rev": "4677392f091e8b5c18d4b535130220a6d1da4aca",
       "src": "https://github.com/nvim-mini/mini.comment"
     },
+    "mini.indentscope": {
+      "rev": "942bc13ccc624c825b086373b8bd6787b98245c8",
+      "src": "https://github.com/nvim-mini/mini.indentscope"
+    },
     "mini.pairs": {
       "rev": "30cf2f01c4aaa2033db67376b9924fa2442c05d6",
       "src": "https://github.com/nvim-mini/mini.pairs"
