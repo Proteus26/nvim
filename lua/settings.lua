@@ -17,6 +17,7 @@ vim.opt.splitbelow = true
 vim.o.clipboard = 'unnamedplus'
 
 vim.o.pumborder = 'rounded'
+vim.o.winborder = 'rounded'
 vim.o.pummaxwidth = 40
 
 vim.g.loaded_netrw = 1

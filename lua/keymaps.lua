@@ -16,7 +16,7 @@ map("n", "<leader>fr", "<cmd>Telescope resume<CR>", { desc = "Resume last picker
 -- Yazi / floaterm
 map("n", "<leader>-", "<cmd>Yazi<CR>", { desc = "Open Yazi at file" })
 map("n", "<leader>cw", "<cmd>Yazi cwd<CR>", { desc = "Open Yazi at cwd" })
-map("n", "<leader>tt", "<cmd>FloatermToggle<CR>", { desc = "Toggle floating terminal" })
+map("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "Toggle floating terminal" })
 
 -- Window navigation
 map("n", "<C-h>", "<C-w>h", { desc = "Navigate Left" })
@@ -43,37 +43,37 @@ map("n", "<leader>bD", "<cmd>%bd|e#|bd#<CR>", { desc = "Delete all other buffers
 
 -- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
-    group = vim.api.nvim_create_augroup("UserLspKeymaps", { clear = true }),
-    callback = function(ev)
-        local opts = { buffer = ev.buf }
+	group = vim.api.nvim_create_augroup("UserLspKeymaps", { clear = true }),
+	callback = function(ev)
+		local opts = { buffer = ev.buf }
 
-        map("n", "gd", vim.lsp.buf.definition, vim.tbl_extend("force", opts, { desc = "Go to definition" }))
-        map("n", "gD", vim.lsp.buf.declaration, vim.tbl_extend("force", opts, { desc = "Go to declaration" }))
-        map("n", "gi", vim.lsp.buf.implementation, vim.tbl_extend("force", opts, { desc = "Go to implementation" }))
-        map("n", "gr", vim.lsp.buf.references, vim.tbl_extend("force", opts, { desc = "List references" }))
-        map("n", "gt", vim.lsp.buf.type_definition, vim.tbl_extend("force", opts, { desc = "Go to type definition" }))
-        map("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Hover docs" }))
-        map("n", "<C-k>", vim.lsp.buf.signature_help, vim.tbl_extend("force", opts, { desc = "Signature help" }))
+		map("n", "gd", vim.lsp.buf.definition, vim.tbl_extend("force", opts, { desc = "Go to definition" }))
+		map("n", "gD", vim.lsp.buf.declaration, vim.tbl_extend("force", opts, { desc = "Go to declaration" }))
+		map("n", "gi", vim.lsp.buf.implementation, vim.tbl_extend("force", opts, { desc = "Go to implementation" }))
+		map("n", "gr", vim.lsp.buf.references, vim.tbl_extend("force", opts, { desc = "List references" }))
+		map("n", "gt", vim.lsp.buf.type_definition, vim.tbl_extend("force", opts, { desc = "Go to type definition" }))
+		map("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Hover docs" }))
+		map("n", "<C-k>", vim.lsp.buf.signature_help, vim.tbl_extend("force", opts, { desc = "Signature help" }))
 
-        map("n", "<leader>rn", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Rename symbol" }))
-        map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code action" }))
-        map({ "n", "v" }, "<leader>cf", function()
-            local ok, conform = pcall(require, "conform")
-            if ok then
-                conform.format({ async = true, lsp_format = "fallback" })
-            else
-                vim.lsp.buf.format({ async = true })
-            end
-        end, vim.tbl_extend("force", opts, { desc = "Format buffer" }))
+		map("n", "<leader>rn", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Rename symbol" }))
+		map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code action" }))
+		map({ "n", "v" }, "<leader>cf", function()
+			local ok, conform = pcall(require, "conform")
+			if ok then
+				conform.format({ async = true, lsp_format = "fallback" })
+			else
+				vim.lsp.buf.format({ async = true })
+			end
+		end, vim.tbl_extend("force", opts, { desc = "Format buffer" }))
 
-        map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder,
-            vim.tbl_extend("force", opts, { desc = "Add workspace folder" }))
-        map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder,
-            vim.tbl_extend("force", opts, { desc = "Remove workspace folder" }))
-        map("n", "<leader>wl", function()
-            vim.print(vim.lsp.buf.list_workspace_folders())
-        end, vim.tbl_extend("force", opts, { desc = "List workspace folders" }))
-    end,
+		map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder,
+			vim.tbl_extend("force", opts, { desc = "Add workspace folder" }))
+		map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder,
+			vim.tbl_extend("force", opts, { desc = "Remove workspace folder" }))
+		map("n", "<leader>wl", function()
+			vim.print(vim.lsp.buf.list_workspace_folders())
+		end, vim.tbl_extend("force", opts, { desc = "List workspace folders" }))
+	end,
 })
 
 -- Diagnostics
@@ -113,11 +113,11 @@ map("n", "<leader>tv", "<cmd>vsplit | terminal<CR>", { desc = "Terminal in verti
 map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 vim.api.nvim_create_autocmd("TermOpen", {
-    group = vim.api.nvim_create_augroup("UserTerminalSplits", { clear = true }),
-    callback = function()
-        vim.opt_local.number = false
-        vim.opt_local.relativenumber = false
-        vim.opt_local.signcolumn = "no"
-        vim.cmd.startinsert()
-    end,
+	group = vim.api.nvim_create_augroup("UserTerminalSplits", { clear = true }),
+	callback = function()
+		vim.opt_local.number = false
+		vim.opt_local.relativenumber = false
+		vim.opt_local.signcolumn = "no"
+		vim.cmd.startinsert()
+	end,
 })

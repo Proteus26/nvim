@@ -2,7 +2,6 @@ require 'settings'
 require 'keymaps'
 
 require 'lsp.autocomplete'
-require 'lsp.mason'
 require 'lsp.servers'
 
 require 'dap.dap'
@@ -27,5 +26,5 @@ require 'fs.telescope'
 require 'fs.yazi'
 
 require 'misc.compiler'
-require 'misc.floaterm'
+require 'misc.toggleterm'
 require 'misc.markview'
