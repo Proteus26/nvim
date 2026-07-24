@@ -11,7 +11,7 @@ vim.g.maplocalleader = " "
 vim.opt.termguicolors = true
 vim.opt.cmdheight = 1
 vim.opt.showmode = false
-vim.opt.showtabline = 2
+vim.opt.showtabline = 1
 vim.opt.splitbelow = true
 
 vim.o.clipboard = 'unnamedplus'

@@ -1,5 +1,9 @@
 vim.pack.add({
-	{ src = "https://github.com/neovim-treesitter/nvim-treesitter", branch = "main" },
+	{
+		src = "https://github.com/neovim-treesitter/nvim-treesitter",
+		branch = "main"
+	},
+	{ src = "https://github.com/neovim-treesitter/treesitter-parser-registry" },
 })
 
 local ts_ok, ts = pcall(require, "nvim-treesitter")

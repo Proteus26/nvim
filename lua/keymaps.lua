@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
--- Neotree
-map("n", "<leader>e", "<cmd>Neotree toggle reveal_force_cwd<CR>", { desc = "Toggle Explorer" })
+-- Oil
+map("n", "<leader>e", "<cmd>Oil --float<CR>", { desc = "Toggle Explorer" })
 
 -- Telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
