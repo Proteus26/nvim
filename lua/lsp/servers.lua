@@ -32,7 +32,7 @@ vim.lsp.config("clangd", {
 		"--background-index",
 		"--clang-tidy",
 		"--completion-style=detailed",
-		"--query-driver=/nix/store/**/bin/*",
+		"--query-driver=/nix/store/*-gcc-*/bin/gcc*,/nix/store/*-clang-*/bin/clang*,/run/current-system/sw/bin/*",
 	},
 })
 
@@ -45,5 +45,5 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
-local servers = { "clangd", "gopls", "pyright", "lua_ls", "nil_ls", "rust_analyzer" }
+local servers = { "clangd", "gopls", "pyright", "lua_ls", "nil_ls", "rust_analyzer", "ts_ls" }
 vim.lsp.enable(servers)

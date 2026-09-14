@@ -58,6 +58,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("n", "<leader>rn", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Rename symbol" }))
 		map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code action" }))
 		map({ "n", "v" }, "<leader>cf", function()
+			if vim.tbl_contains({ "javascript", "typescript", "javascriptreact", "typescriptreact" }, vim.bo.filetype) then
+				vim.notify("Formatting disabled for JS/TS (handled by project tooling)", vim.log.levels.INFO)
+				return
+			end
 			local ok, conform = pcall(require, "conform")
 			if ok then
 				conform.format({ async = true, lsp_format = "fallback" })

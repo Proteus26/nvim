@@ -10,8 +10,9 @@ local ts_ok, ts = pcall(require, "nvim-treesitter")
 if not ts_ok then return end
 
 local parsers = {
-	"c", "cpp", "cuda", "python", "r", "fortran", "lua", "vim", "vimdoc", "query", "zsh", "go", "gomod", "gosum",
-	"gowork",
+	"c", "cpp", "cuda", "python", "r", "fortran", "lua", "vim", "vimdoc", "query", "zsh", "bash", "go", "gomod", "gosum",
+	"gowork", "rust", "nix", "java", "javascript", "typescript", "tsx", "json", "jsonc", "markdown", "markdown_inline",
+	"yaml", "toml",
 }
 
 ts.install(parsers)

@@ -17,13 +17,6 @@ require("mini.indentscope").setup({
 	},
 })
 
-require("mini.indentscope").setup({
-	symbol = "│",
-	options = {
-		try_as_border = true,
-	},
-})
-
 local function set_indentscope_hl()
 	local ok, palette = pcall(require, "catppuccin.palettes")
 	if ok then
