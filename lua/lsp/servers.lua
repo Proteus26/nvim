@@ -45,5 +45,5 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
-local servers = { "clangd", "gopls", "pyright", "lua_ls", "nil_ls", "rust_analyzer", "ts_ls" }
+local servers = { "clangd", "gopls", "pyright", "lua_ls", "nil_ls", "rust_analyzer", "ts_ls", "jdtls" }
 vim.lsp.enable(servers)

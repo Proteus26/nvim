@@ -40,6 +40,10 @@
       "rev": "fae936abb5e0345b85c3a03ecf38525b0828b992",
       "src": "https://github.com/rebelot/heirline.nvim"
     },
+    "lean.nvim": {
+      "rev": "42186878a385ab021296e8f8024521d11a661754",
+      "src": "https://github.com/Julian/lean.nvim"
+    },
     "lspkind.nvim": {
       "rev": "c7274c48137396526b59d86232eabcdc7fed8a32",
       "src": "https://github.com/onsails/lspkind.nvim"

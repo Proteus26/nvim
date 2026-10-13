@@ -3,6 +3,7 @@ require 'keymaps'
 
 require 'lsp.autocomplete'
 require 'lsp.servers'
+require 'lsp.lean'
 
 require 'dap.dap'
 
